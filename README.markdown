@@ -2,6 +2,12 @@ Repo for a standard Bootstrap based sphinx theme.
 
 Partially based off https://github.com/ryan-roemer/sphinx-bootstrap-theme
 
+Theme Options
+=============
+
+* logo\_icon: logo icon url (can be local in \_static) to use in top bar (in addition to title). Will be rendered with a height of 25px.
+* git\_repo: git(hub) repository link for the fork me badge. Example: `https://github.com/okfn/sphinx-theme-okfn`
+
 License
 =======
 

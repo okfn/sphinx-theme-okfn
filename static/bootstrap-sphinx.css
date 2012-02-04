@@ -14,11 +14,9 @@ div.documentwrapper {
   width: 100%;
 }
 
-{%- block sidebarlogo %}
-  {%- if logo %}
-.topbar h3 a, .topbar .brand {
-  background: transparent url("{{ logo }}") no-repeat 22px 3px;
-  padding-left: 62px;
+.topbar .logo-icon {
+  float: left;
+  height: 25px;
+  padding: 5px 5px 0 0;
 }
-  {%- endif %}
-{%- endblock %}
+
