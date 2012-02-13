@@ -4,9 +4,12 @@
 *
 * Sphinx stylesheet -- Twitter Bootstrap theme.
 */
-
 body {
-  padding-top: 42px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+.sidebar-nav {
+  padding: 9px 0;
 }
 
 div.documentwrapper {
@@ -14,19 +17,9 @@ div.documentwrapper {
   width: 100%;
 }
 
-.topbar .logo-icon img {
+.navbar .logo-icon img {
   float: left;
   height: 25px;
   padding: 5px 5px 0 0;
-}
-
-.content {
-  padding: 20px;
-  margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
-}
-
-.content > section h1 {
-  padding: 20px 20px 10px;
-  margin: -20px -20px 20px;
 }
 
