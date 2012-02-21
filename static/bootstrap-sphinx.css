@@ -27,7 +27,8 @@ li {
 }
 
 h1 {
-  line-height: 66px;
+  font-size: 36px;
+  margin-bottom: 15px;
 }
 
 h2 {
@@ -47,7 +48,6 @@ a {
 /****************** Simpler Navbar *********************/
 
 .navbar-inner {
-  background: #fff;
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
@@ -59,7 +59,10 @@ a {
 .navbar .brand,
 .navbar-search .search-query,
 .navbar-search .search-query:hover {
-  color: #333;
+}
+
+.navbar a.brand {
+  font-weight: bold;
 }
 
 /**************** Sidebar **********************/
@@ -152,8 +155,8 @@ footer {
   line-height: 18px;
 }
 
-div.sphinxsidebar {
-  font-size: 85%;
+div.sphinxsidebar, div.sphinxsidebar p {
+  font-size: 14px;
   padding-bottom: 2em;
 }
 
