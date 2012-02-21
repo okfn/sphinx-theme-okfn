@@ -4,12 +4,29 @@
 *
 * Sphinx stylesheet -- Twitter Bootstrap theme.
 */
+html, body {
+  background-color: #eee;
+}
+
 body {
   padding-top: 60px;
   padding-bottom: 40px;
 }
 .sidebar-nav {
   padding: 9px 0;
+}
+
+.content {
+  background-color: #fff;
+  padding: 20px;
+  margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+          box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+
+footer {
+  margin: 15px 0px;
 }
 
 div.documentwrapper {

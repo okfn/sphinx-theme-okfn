@@ -44,7 +44,7 @@
     <div class="span9">
       <div class="content">
        {% block body %} {% endblock %}
-     </div>
+      </div>
     </div>
     <div class="span3">
       {% block sidebartoc %}
@@ -60,7 +60,7 @@
 {%- endblock %}
 
 {%- block footer %}
-<div class="container">
+<div class="container"><div class="row"><div class="span9">
 <footer class="footer">
   <p class="pull-right"><a href="#">Back to top</a></p>
   <p class="copyright">
@@ -77,6 +77,6 @@
   {%- endif %}
   </p>
 </footer>
-</div>
+</div></div></div>
 {%- endblock %}
 
