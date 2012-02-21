@@ -8,6 +8,12 @@ Theme Options
 * logo\_icon: logo icon url (can be local in \_static) to use in top bar (in addition to title). Will be rendered with a height of 25px.
 * git\_repo: git(hub) repository link for the fork me badge. Example: `https://github.com/okfn/sphinx-theme-okfn`
 
+Configuring the sidebar:
+
+* Use the standard sphinx sidebars setup: http://sphinx.pocoo.org/config.html#confval-html_sidebars
+
+  * E.g. to have the global ToC there just add globaltoc.html to the list.
+
 License
 =======
 

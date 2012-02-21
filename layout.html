@@ -39,7 +39,6 @@
 
 {# Silence the sidebar's, relbar's #}
 {% block sidebar1 %}{% endblock %}
-{% block sidebar2 %}{% endblock %}
 {% block relbar1 %}{% endblock %}
 {% block relbar2 %}{% endblock %}
 
@@ -52,13 +51,11 @@
       </div>
     </div>
     <div class="span3">
-      {% block sidebartoc %}
       <div class="well sidebar-nav">
-        <div class="nav nav-list">
-        {{ toctree(maxdepth=2) }}
-        </div>
+        {% block sidebar2 %}
+          {{ sidebar() }}
+        {% endblock %}
       </div><!--/.well -->
-      {% endblock %}
     </div><!--/span-->
   </div> <!-- / row -->
 </div>

@@ -12,9 +12,36 @@ body {
   padding-top: 60px;
   padding-bottom: 40px;
 }
-.sidebar-nav {
-  padding: 9px 0;
+
+/**************** Sidebar **********************/
+
+div.sphinxsidebar {
+  float: none;
+  width: auto;
+  margin-left: auto;
+  font-size: inherit;
 }
+
+div.sphinxsidebarwrapper {
+  padding: 0;
+}
+
+.toc > ul {
+  margin-left: 0;
+}
+
+.toc li a.current {
+  display: block;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  background-color: #0088cc;
+  margin-left: -19px;
+  margin-right: -19px;
+  padding-left: 19px;
+}
+
+
+/**************** Main Page **********************/
 
 .content {
   background-color: #fff;
