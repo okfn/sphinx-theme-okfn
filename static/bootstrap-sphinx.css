@@ -36,7 +36,12 @@ div.documentwrapper {
 
 .navbar .logo-icon img {
   float: left;
-  height: 25px;
+  max-height: 28px;
   padding: 5px 10px 0 0;
+}
+
+.navbar .okfn-logo img {
+  margin-top: 5px;
+  margin-left: 4px;
 }
 

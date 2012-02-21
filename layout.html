@@ -13,6 +13,11 @@
         <a class="brand" href="{{ pathto(master_doc) }}">{{ project|e }}</a>
         <ul class="nav">
         </ul>
+        {% if theme_show_okfn_logo %}
+        <a class="okfn-logo pull-right" href="http://okfn.org/" title="An Open Knowledge Foundation Project">
+          <img src="http://assets.okfn.org/p/okfn/img/logo_28x30.png" alt="Open Knowledge Foundation logo" />
+        </a>
+        {% endif %}
         {% block sidebarsearch %}
           {% include "searchbox.html" %}
         {% endblock %}
