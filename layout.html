@@ -13,6 +13,11 @@
         <a class="brand" href="{{ pathto(master_doc) }}">{{ project|e }}</a>
         <ul class="nav">
         </ul>
+        {% if theme_show_okfn_logo %}
+        <a class="okfn-logo pull-right" href="http://okfn.org/" title="An Open Knowledge Foundation Project">
+          <img src="http://assets.okfn.org/p/okfn/img/logo_28x30.png" alt="Open Knowledge Foundation logo" />
+        </a>
+        {% endif %}
         {% block sidebarsearch %}
           {% include "searchbox.html" %}
         {% endblock %}
@@ -61,25 +66,7 @@
 <footer>
   <div class="inner">
     <div class="container">
-      <p class="copyright">
-      {%- if show_copyright %}
-        {% trans copyright=copyright|safe|e %}{{ copyright }}{% endtrans %}<br/>
-      {%- endif %}
-      </p>
-
-      <ul class="footer-links span4 pull-left">
-      </ul>
-      <ul class="footer-links span4 pull-left">
-      </ul>
-
-      <p class="meta">
-      {%- if last_updated %}
-        {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}<br/>
-      {%- endif %}
-      {%- if show_sphinx %}
-        {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}<br/>
-      {%- endif %}
-      </p>
+      {% include "footer.html" %}
     </div>
   </div>
 </footer>

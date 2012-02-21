@@ -161,7 +161,7 @@ footer,
 footer p {
   font-family: "OpenSansLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
-  line-height: 18px;
+  line-height: 22px;
 }
 
 footer {
@@ -184,6 +184,5 @@ footer ul.footer-links {
 footer a, footer a:hover {
   color: #AEEBDF;
 }
-
 
 
