@@ -78,6 +78,10 @@ div.sphinxsidebarwrapper {
   padding: 0;
 }
 
+div.sphinxsidebar, div.sphinxsidebar p {
+  font-size: 14px;
+}
+
 .toc > ul {
   margin-left: 0;
 }
@@ -153,11 +157,6 @@ footer {
   font-family: "OpenSansLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
-}
-
-div.sphinxsidebar, div.sphinxsidebar p {
-  font-size: 14px;
-  padding-bottom: 2em;
 }
 
 footer,
