@@ -1,18 +1,46 @@
-Repo for a standard Bootstrap based sphinx theme.
-
-Partially based off https://github.com/ryan-roemer/sphinx-bootstrap-theme
+Repo for a Bootstrap based sphinx theme with lots of customizability (e.g.
+google analytics, logo etc).
 
 Theme Options
 =============
 
-* logo\_icon: logo icon url (can be local in \_static) to use in top bar (in addition to title). Will be rendered with a height of 25px.
-* git\_repo: git(hub) repository link for the fork me badge. Example: `https://github.com/okfn/sphinx-theme-okfn`
+* logo\_icon: logo icon url (can be local in \_static) to use in top bar (in
+  addition to title). Will be rendered with a height of 25px.
+* git\_repo: git(hub) repository link for the fork me badge. Example:
+  `https://github.com/okfn/sphinx-theme-okfn`
 
 Configuring the sidebar:
 
-* Use the standard sphinx sidebars setup: http://sphinx.pocoo.org/config.html#confval-html_sidebars
+* Use the standard sphinx sidebars setup: http://sphinx.pocoo.org/config.html#confval-html\_sidebars
 
   * E.g. to have the global ToC there just add globaltoc.html to the list.
+
+How to Use
+==========
+
+Imagine you have a sphinx project with layout like:
+
+    source
+      conf.py
+    {other-dirs ...}  
+
+You would do:
+
+    git submodule add git://github.com/okfn/sphinx-theme-okfn.git source/_themes/sphinx-theme-okfn
+    # then commit ...
+    git commit -m "Adding submodule for sphinx-theme-okfn"
+
+Then in `conf.py` you would config like:
+
+<pre>
+sys.path.append(os.path.abspath('_themes'))
+html_theme_path = ['_themes']
+html_theme = 'sphinx-theme-okfn'
+html_theme_options = {
+        'logo_icon': ...
+        'google_analytics_id': ...
+    }
+</pre>
 
 License
 =======
