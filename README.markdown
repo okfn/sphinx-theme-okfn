@@ -15,6 +15,22 @@ Configuring the sidebar:
 
   * E.g. to have the global ToC there just add globaltoc.html to the list.
 
+Configuring the Footer
+----------------------
+
+Override the footer.html template.
+
+
+Configuring the Top Bar
+-----------------------
+
+You can add navigation links (and other material) to the top bar by overriding the navbar-nav.html template. This material will fit into the bootstrap topbar after the main brand link on the left. An example navbar-nav would be:
+
+    <ul class="nav">
+      <li><a href="">my link</a></li>
+    </ul>
+
+
 How to Use
 ==========
 
