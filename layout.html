@@ -18,7 +18,7 @@
         <a class="logo-icon pull-left" href="{{ pathto(master_doc) }}"><img src="{{theme_logo_icon}}" alt="{{ project|e }}" /></a>
         {% endif %}
         <a class="brand" href="{{ pathto(master_doc) }}">{{ project|e }}</a>
-        {% include "navbar-nav.html" %}
+        {% include "navbar-nav.html" ignore missing %}
         {% if theme_show_okfn_logo %}
         <a class="okfn-logo pull-right" href="http://okfn.org/" title="An Open Knowledge Foundation Project">
           <img src="http://assets.okfn.org/p/okfn/img/logo_28x30.png" alt="Open Knowledge Foundation logo" />
