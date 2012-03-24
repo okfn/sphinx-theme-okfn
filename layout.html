@@ -2,8 +2,15 @@
 {% set script_files = script_files + ['_static/bootstrap-css-tweaks.js'] %}
 {% set css_files = ['_static/css/bootstrap.css', '_static/css/bootstrap-responsive.css', '_static/bootstrap-sphinx.css'] + css_files %}
 
-{# Sidebar: Rework into our Boostrap nav section. #}
-{% macro navBar() %}
+
+{%- block extrahead %}
+{% endblock %}
+
+{% block header %}
+  {% if theme_git_repo %}
+    <a href="{{ theme_git_repo }}"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 50000;"
+    src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+  {% endif %}
   <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
@@ -24,17 +31,6 @@
       </div>
     </div>
   </div>
-{% endmacro %}
-
-{%- block extrahead %}
-{% endblock %}
-
-{% block header %}
-  {% if theme_git_repo %}
-    <a href="{{ theme_git_repo }}"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 50000;"
-    src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-  {% endif %}
-  {{ navBar() }}
 {% endblock %}
 
 {# Silence the sidebar's, relbar's #}
