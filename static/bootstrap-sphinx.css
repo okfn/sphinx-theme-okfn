@@ -81,6 +81,10 @@ a {
   font-weight: bold;
 }
 
+.navbar .brand .version {
+  font-size: 90%;
+}
+
 /**************** Sidebar **********************/
 
 div.sphinxsidebar {
