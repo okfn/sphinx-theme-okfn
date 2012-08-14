@@ -13,7 +13,9 @@ Configuring the sidebar:
 
 * Use the standard sphinx sidebars setup: http://sphinx.pocoo.org/config.html#confval-html\_sidebars
 
-  * E.g. to have the global ToC there just add globaltoc.html to the list.
+  * E.g. to have the global ToC there just add globaltoc.html to the list. To
+    have local table of contents (for current page) at localtoc.html to the
+    list.
 
 Configuring the Footer
 ----------------------
