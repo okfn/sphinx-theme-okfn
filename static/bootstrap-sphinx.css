@@ -218,4 +218,12 @@ footer a, footer a:hover {
   color: #AEEBDF;
 }
 
+/**************** Auto docs **********************/
+dl.function {
+  margin-top: 80px;
+}
+
+dl.function th {
+  vertical-align: top;
+}
 
