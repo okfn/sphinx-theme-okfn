@@ -62,11 +62,78 @@ a {
 
 /* code styling */
 
+.docutils.literal, code, pre {
+  font-family: "PT Mono", Menlo, Monaco, "Courier New", monospace;
+}
+
 .docutils.literal {
   padding: 0 2px;
-  font-family: "PT Mono", Menlo, Monaco, "Courier New", monospace;
-  color: #333333;
   color: #d14;
+}
+
+pre, code {
+  margin: 1em 0 1em 2em;;
+  font-size: 14px;
+  white-space: pre;
+}
+
+/****************** Admonitions *********************/
+
+/* Shared by admonitions, warnings and sidebars */
+div.admonition,
+div.warning {
+    font-size: 0.9em;
+    margin: 2em;
+    padding: 0;
+    /*
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    */
+}
+div.admonition p,
+div.warning p {
+    margin: 0.5em 1em 0.5em 1em;
+    padding: 0;
+}
+div.admonition pre,
+div.warning pre {
+    margin: 0.4em 1em 0.4em 1em;
+}
+div.admonition p.admonition-title,
+div.warning p.admonition-title {
+    margin: 0;
+    padding: 0.1em 0 0.1em 0.5em;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.5);
+}
+div.admonition ul, div.admonition ol,
+div.warning ul, div.warning ol {
+    margin: 0.1em 0.5em 0.5em 3em;
+    padding: 0;
+}
+
+/* Admonitions and sidebars only */
+div.admonition {
+    border: 1px solid #609060;
+    background-color: #e9ffe9;
+}
+div.admonition p.admonition-title {
+    background-color: #70A070;
+    border-bottom: 1px solid #609060;
+}
+
+
+/* Warnings only */
+div.warning {
+    border: 1px solid #900000;
+    background-color: #ffe9e9;
+}
+div.warning p.admonition-title {
+    background-color: #b04040;
+    border-bottom: 1px solid #900000;
 }
 
 /****************** Simpler Navbar *********************/
