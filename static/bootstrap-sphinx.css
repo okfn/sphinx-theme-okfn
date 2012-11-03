@@ -22,8 +22,8 @@ body {
 
 body, p, blockquote p {
   font-family: 'PT Sans',Helvetica,Arial,sans-serif;
-  font-size: 15px;
-  line-height: 25px;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 li {
@@ -31,12 +31,24 @@ li {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 42px;
+  line-height: 50px;
   margin-bottom: 15px;
 }
 
 h2 {
   line-height: 50px;
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 40px;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 30px;
 }
 
 blockquote p {
