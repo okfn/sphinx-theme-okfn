@@ -4,12 +4,16 @@
 *
 * Sphinx stylesheet -- Twitter Bootstrap theme.
 */
+
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700);
+@import url(http://fonts.googleapis.com/css?family=PT+Mono);
+
 html, body {
   background-color: #eee;
 }
 
 body {
-  padding-top: 50px;
+  padding-top: 42px;
   padding-bottom: 40px;
 }
 
@@ -17,8 +21,8 @@ body {
 /**************** Typo *************************/
 
 body, p, blockquote p {
-  font-family: Palatino, georgia, 'times new roman', serif;
-  font-size: 16px;
+  font-family: 'PT Sans',Helvetica,Arial,sans-serif;
+  font-size: 15px;
   line-height: 25px;
 }
 
@@ -47,38 +51,31 @@ a {
 /* code styling */
 
 .docutils.literal {
-  padding: 0 3px 2px;
-  font-family: Menlo, Monaco, "Courier New", monospace;
-  font-size: 12px;
+  padding: 0 2px;
+  font-family: "PT Mono", Menlo, Monaco, "Courier New", monospace;
   color: #333333;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-
-  padding: 3px 4px;
   color: #d14;
-  background-color: #f7f7f9;
-  border: 1px solid #e1e1e8;
 }
 
 /****************** Simpler Navbar *********************/
+
+.navbar {
+  font-family: "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
 
 .navbar-inner {
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  padding-top: 0.3em;
+  padding-bottom: 0.2em;
 }
 
 .navbar .brand,
 .navbar-search .search-query,
 .navbar-search .search-query:hover {
-}
-
-.navbar a.brand {
-  font-weight: bold;
 }
 
 .navbar .brand .version {
@@ -100,6 +97,10 @@ div.sphinxsidebarwrapper {
 
 div.sphinxsidebar, div.sphinxsidebar p {
   font-size: 14px;
+}
+
+div.sphinxsidebar ul, div.sphinxsidebar ul ul {
+  list-style-type: none;
 }
 
 .toc > ul {
@@ -169,30 +170,8 @@ footer {
   margin-bottom: 0px;
 }
 
-@font-face {
-  font-family: 'OpenSansLight';
-  src: url('font/opensans/opensans-light-webfont.eot');
-  src: url('font/opensans/opensans-light-webfont.eot?#iefix') format('embedded-opentype'), url('font/opensans/opensans-light-webfont.woff') format('woff'), url('font/opensans/opensans-light-webfont.ttf') format('truetype'), url('font/opensans/opensans-light-webfont.svg#OpenSansLight') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-    font-family: "OpenSansSemibold";
-    font-style: normal;
-    font-weight: 600;
-    src: url("font/opensans/opensans-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("font/opensans/opensans-semibold-webfont.woff") format("woff"), url("font/opensans/opensans-semibold-webfont.ttf") format("truetype"), url("font/opensans/opensans-semibold-webfont.svg#OpenSansLight") format("svg");
-}
-
-.navbar {
-  font-family: "OpenSansLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-}
-
 footer,
 footer p {
-  font-family: "OpenSansLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 22px;
 }
