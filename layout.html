@@ -40,11 +40,6 @@
 {%- block content %}
 <div class="container">
   <div class="row">
-    <div class="span8">
-      <div class="content">
-       {% block body %} {% endblock %}
-      </div>
-    </div>
     <div class="span4">
       <div class="well sidebar-nav">
         {% block sidebar2 %}
@@ -52,6 +47,11 @@
         {% endblock %}
       </div><!--/.well -->
     </div><!--/span-->
+    <div class="span8">
+      <div class="content">
+       {% block body %} {% endblock %}
+      </div>
+    </div>
   </div> <!-- / row -->
 </div>
 {%- endblock %}
