@@ -12,11 +12,6 @@ html, body {
   background-color: #eee;
 }
 
-body {
-  padding-top: 42px;
-  padding-bottom: 40px;
-}
-
 
 /**************** Typo *************************/
 
@@ -159,6 +154,19 @@ div.warning p.admonition-title {
 
 .navbar .brand .version {
   font-size: 90%;
+}
+
+.navbar-search.pull-right {
+    float: right !important;
+}
+
+.navbar-search {
+    padding: 0px !important;
+    margin: none !important;
+    border-top: none !important;
+    border-top: 0px !important;
+    border-bottom: 0px !important;
+    box-shadow: none !important
 }
 
 /**************** Sidebar **********************/

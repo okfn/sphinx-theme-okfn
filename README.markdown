@@ -60,6 +60,16 @@ html_theme_options = {
     }
 </pre>
 
+**Note**: If you use the theme as it is, a broken search box will be rendered
+in the left sidebar. In order to fix it, customize the items rendered in the
+sidebar:
+
+<pre>
+    html_sidebars = {
+        '**': ['globaltoc.html', 'localtoc.html', 'relations.html']
+    }
+</pre>
+
 License
 =======
 
