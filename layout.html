@@ -1,6 +1,6 @@
 {% extends "basic/layout.html" %}
 {% set script_files = script_files + ['_static/bootstrap-css-tweaks.js'] %}
-{% set css_files = ['_static/css/bootstrap.css', '_static/css/bootstrap-responsive.css', '_static/bootstrap-sphinx.css'] + css_files %}
+{% set css_files = ['_static/css/bootstrap.css', '_static/css/fix.css', '_static/css/bootstrap-responsive.css', '_static/bootstrap-sphinx.css'] + css_files %}
 
 
 {%- block extrahead %}
@@ -13,7 +13,7 @@
   {% endif %}
   <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
-      <div class="container">
+      <div class="container-fluid">
         {% if theme_logo_icon %}
         <a class="logo-icon pull-left" href="{{ pathto(master_doc) }}"><img src="{{ pathto('_static/' + theme_logo_icon, 1) }}" alt="{{ project|e }}" /></a>
         {% endif %}
@@ -38,8 +38,8 @@
 {% block relbar2 %}{% endblock %}
 
 {%- block content %}
-<div class="container">
-  <div class="row">
+<div class="container-fluid">
+  <div class="row-fluid">
     <div class="span4">
       <div class="well sidebar-nav">
         {% block sidebar2 %}
@@ -60,7 +60,7 @@
 
 <footer>
   <div class="inner">
-    <div class="container">
+    <div class="container-fluid">
       {% include "footer.html" %}
     </div>
   </div>
