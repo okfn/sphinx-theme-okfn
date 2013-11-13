@@ -192,7 +192,6 @@ div.sphinxsidebar ul, div.sphinxsidebar ul ul {
 
 .toc > ul {
   margin-left: 0;
-  border-bottom: solid 2px #ddd;
 }
 
 .toc li a.current {
