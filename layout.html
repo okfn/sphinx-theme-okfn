@@ -32,7 +32,7 @@
   </div>
 {% endblock %}
 
-{# Silence the sidebar's, relbar's #}
+{# Silence the sidebar and relbars. #}
 {% block sidebar1 %}{% endblock %}
 {% block relbar1 %}{% endblock %}
 {% block relbar2 %}{% endblock %}
@@ -49,7 +49,44 @@
     </div><!--/span-->
     <div class="span8">
       <div class="content">
-       {% block body %} {% endblock %}
+
+        {# The breadcrumb navigation links. #}
+        <div style="font-size:smaller;">
+            {%- block rootrellink %}
+              <a href="{{ pathto(master_doc) }}">{{ shorttitle|e }}</a>{{ reldelim1 }}
+            {%- endblock %}
+            {%- for parent in parents %}
+              <a href="{{ parent.link|e }}"
+                    {% if loop.last %}{{ accesskey("U") }}{% endif %}>
+                    {{ parent.title }}
+                  </a>
+                  {{ reldelim1 }}
+            {%- endfor %}
+        </div>
+
+        {% block body %} {% endblock %}
+
+        {# The next and previous page links. #}
+        <div style="font-size:smaller;">
+          <hr/>
+          {% for rellink in rellinks %}
+            {% if rellink[2] in ('N', 'P') %}
+              <div {% if rellink[2] == 'N' %}class="pull-right"{% endif %}>
+                <a href="{{ pathto(rellink[0]) }}"
+                  title="{{ rellink[1]|striptags|e }}" {{ accesskey(rellink[2]) }}>
+                    {% if rellink[2] == 'P' %}
+                      {% set text = "&larr; " + (rellink[1] | truncate(50)) %}
+                    {% elif rellink[2] == 'N' %}
+                      {% set text = (rellink[1] | truncate(50)) + "&rarr;" %}
+                    {% endif %}
+                    {{ text | striptags | e }}
+                </a>
+              </div>
+            {% endif %}
+          {% endfor %}
+          <div style="clear:both;"></div>
+        </div>
+
       </div>
     </div>
   </div> <!-- / row -->
