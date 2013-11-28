@@ -1,7 +1,7 @@
-{%- if pagename != "search" %}
-<form class="pull-right navbar-search" action="{{ pathto('search') }}" method="get">
-  <input type="text" name="q" placeholder="Search" class="search-query span2" />
+<h3 class="searchheading">Quick search</h3>
+<form class="searchbox" action="{{ pathto('search') }}" method="get">
+  <input type="text" name="q" placeholder="Search" class="search-query" />
   <input type="hidden" name="check_keywords" value="yes" />
   <input type="hidden" name="area" value="default" />
 </form>
-{%- endif %}
+<small class="searchtip">Enter search terms or a module, class or function name.</small>
