@@ -1,3 +1,7 @@
+@import url(//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap-combined.min.css);
+@import url(http://assets.okfn.org/themes/okfn/styles.css);
+@import url(http://assets.okfn.org/themes/okfn/okf-panel.css);
+
 /*
 * bootstrap-sphinx.css
 * ~~~~~~~~~~~~~~~~~~~~
@@ -5,19 +9,10 @@
 * Sphinx stylesheet -- Twitter Bootstrap theme.
 */
 
-@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700);
-@import url(http://fonts.googleapis.com/css?family=PT+Mono);
-
-html, body {
-  background-color: #eee;
-}
-
-
 /**************** Typo *************************/
 
 body, p, blockquote p {
-  font-family: 'PT Sans',Helvetica,Arial,sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
 }
 
@@ -25,52 +20,22 @@ li {
   line-height: 25px;
 }
 
-h1 {
-  font-size: 42px;
-  line-height: 50px;
-  margin-bottom: 15px;
-}
-
-h2 {
-  line-height: 50px;
-  font-size: 36px;
-}
-
-h3 {
-  font-size: 30px;
-  line-height: 40px;
-}
-
-h4 {
-  font-size: 24px;
-  line-height: 30px;
-}
-
 blockquote p {
   font-style: italic;
   margin-bottom: 1em;
 }
 
-a {
-  color: #005580;
-}
 
 /* code styling */
-
-.docutils.literal, code, pre {
-  font-family: "PT Mono", Menlo, Monaco, "Courier New", monospace;
-}
-
 .docutils.literal {
   padding: 0 2px;
-  color: #d14;
 }
-
 pre, code {
-  margin: 1em 0 1em 2em;;
+  margin: 1em 0 1em 2em;
   font-size: 14px;
   white-space: pre;
 }
+
 
 /****************** Admonitions *********************/
 
@@ -80,11 +45,6 @@ div.warning {
     font-size: 0.9em;
     margin: 2em;
     padding: 0;
-    /*
-    border-radius: 6px;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
-    */
 }
 div.admonition p,
 div.warning p {
@@ -112,82 +72,140 @@ div.warning ul, div.warning ol {
 
 /* Admonitions and sidebars only */
 div.admonition {
-    border: 1px solid #609060;
-    background-color: #e9ffe9;
+    border: 1px solid #E9EAEA;
 }
 div.admonition p.admonition-title {
-    background-color: #70A070;
-    border-bottom: 1px solid #609060;
+    background-color: rgb(26, 152, 139);
 }
-
 
 /* Warnings only */
 div.warning {
-    border: 1px solid #900000;
-    background-color: #ffe9e9;
+    border: 1px solid #E9EAEA;
 }
 div.warning p.admonition-title {
-    background-color: #b04040;
-    border-bottom: 1px solid #900000;
+    background-color: #CB130E;
 }
+
 
 /****************** Simpler Navbar *********************/
-
-.navbar {
-  font-family: "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
-}
-
-.navbar-inner {
-  border-radius: 4px;
-  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
-  padding-top: 0.3em;
-  padding-bottom: 0.2em;
-}
-
-.navbar .brand,
-.navbar-search .search-query,
-.navbar-search .search-query:hover {
-}
 
 .navbar .brand .version {
   font-size: 90%;
 }
 
-.navbar-search.pull-right {
-    float: right !important;
+.navbar-search .searchheading,
+.navbar-search .searchtip {
+	display:none;
 }
 
-.navbar-search {
-    padding: 0px !important;
-    margin: none !important;
-    border-top: none !important;
-    border-top: 0px !important;
-    border-bottom: 0px !important;
-    box-shadow: none !important
+
+/**************** Search **********************/
+.searchbox {
+	margin:11px 0 13px 0;
 }
+.searchbox .search-query {
+	width:100%;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	height:28px;
+	line-height:28px;
+	padding-top:0;
+	padding-bottom:0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+
+/**************** Breadcrumb **********************/
+.sub-header .breadcrumb {
+	margin:auto;
+	font-size:0.8em;
+}
+
 
 /**************** Sidebar **********************/
-
 div.sphinxsidebar {
   float: none;
   width: auto;
   margin-left: auto;
-  font-size: inherit;
+	background-color: #F8F8F8;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	word-wrap: break-word;
 }
 
 div.sphinxsidebarwrapper {
-  padding: 0;
+  padding: 15px;
 }
 
-div.sphinxsidebar, div.sphinxsidebar p {
+div.sphinxsidebar h3,
+div.sphinxsidebar h4 {
+	margin:0 -15px 7px -15px;
+	padding: 0 15px 5px 15px;
+  border-bottom: 1px solid #22998B;
+  font-size: 16px;
+  font-weight: 200;
+	text-transform:uppercase;
+	line-height: normal;
+}
+
+div.sphinxsidebar,
+div.sphinxsidebar p {
   font-size: 14px;
 }
 
-div.sphinxsidebar ul, div.sphinxsidebar ul ul {
+div.sphinxsidebar ul,
+div.sphinxsidebar ul ul {
   list-style-type: none;
+	margin:0;
+}
+div.sphinxsidebar .sphinxsidebarwrapper div > ul > li,
+div.sphinxsidebar .sphinxsidebarwrapper > ul > li,
+div.sphinxsidebar .sphinxsidebarwrapper > p {
+  margin-left: -16px;
+  margin-right: -15px;
+}
+div.sphinxsidebar a {
+	padding: 5px 15px;
+	display:block;
+	color:#333333;
+	border-left:solid 1px rgba(34, 153, 139, 0);
+	line-height:normal;
+}
+div.sphinxsidebar a:hover {
+  text-decoration: none;
+	border-left-color:rgb(34, 153, 139);
+}
+div.sphinxsidebar ul ul a {
+	padding-left:25px;
+}
+div.sphinxsidebar ul ul ul a {
+	padding-left:35px;
+}
+div.sphinxsidebar ul ul ul ul a {
+	padding-left:45px;
+}
+div.sphinxsidebar ul ul ul ul ul a {
+	padding-left:55px;
+}
+div.sphinxsidebar ul ul ul ul ul ul a {
+	padding-left:65px;
+}
+div.sphinxsidebar ul ul ul ul ul ul ul a {
+	padding-left:75px;
+}
+div.sphinxsidebar ul ul ul ul ul ul ul ul a {
+	padding-left:85px;
+}
+div.sphinxsidebar ul ul ul ul ul ul ul ul ul a {
+	padding-left:95px;
+}
+
+div.sphinxsidebar input {
+	border-color:#CCCCCC;
 }
 
 .toc > ul {
@@ -198,37 +216,25 @@ div.sphinxsidebar ul, div.sphinxsidebar ul ul {
   display: block;
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  background-color: #0088cc;
-  margin-left: -19px;
-  margin-right: -19px;
-  padding-left: 19px;
+  background-color: #1A988B;
 }
 
 
 /**************** Main Page **********************/
 
-.content {
-  background-color: #fff;
-  padding: 20px;
-  margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
-     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
-          box-shadow: 0 1px 2px rgba(0,0,0,.15);
-}
-
-/* fix for fixed topbar which can obscure section headings */
-div.section h1, div.section h2, div.section h3, div.section h4, div.section h5 {
-  padding-top: 50px;
+div.section h1,
+div.section h2,
+div.section h3,
+div.section h4,
+div.section h5 {
+  padding-top: 20px;
 }
 
 /* do not do this for first item on the page ...*/
 .content div.section:first-child h1 {
-  padding-top: 0px;
+  padding-top: 0;
 }
 
-footer {
-  margin: 15px 0px;
-}
 
 div.documentwrapper {
   float: left;
@@ -237,8 +243,8 @@ div.documentwrapper {
 
 .navbar .logo-icon img {
   float: left;
-  max-height: 28px;
-  padding: 5px 10px 0 0;
+  height: 30px;
+  padding: 17px 5px 0 0;
 }
 
 .navbar .okfn-logo img {
@@ -246,42 +252,18 @@ div.documentwrapper {
   margin-left: 4px;
 }
 
-/* OKFN Footer */
 
-body {
-  padding-bottom: 0px;
-}
-
-footer {
-  margin-bottom: 0px;
-}
-
+/* Footer */
 footer,
 footer p {
   font-size: 13px;
   line-height: 22px;
 }
 
-footer {
-  background: #222222 url('img/okfn-watermark.png') top right no-repeat;
-  margin-top: 50px;
-  padding: 0;
-}
-
-footer > .inner {
-  background: url('img/footer-bevel.png') top repeat-x;
-  padding: 10px 0 30px 0;
-  color: #fff;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
-  min-height: 190px;
-}
-
-footer ul.footer-links {
-}
-
 footer a, footer a:hover {
-  color: #AEEBDF;
+  color: #333333;
 }
+
 
 /**************** Auto docs **********************/
 dl.function {
@@ -292,3 +274,40 @@ dl.function th {
   vertical-align: top;
 }
 
+
+/**************** OKF Ribbon **********************/
+.okfn-ribbon {
+  margin-left: 13px;
+}
+
+
+/**************** Github Ribbon **********************/
+.forkme img {
+	display:none;
+}
+.forkme:before {
+	content: attr(title);
+}
+
+
+/**************** Media queries **********************/
+@media (min-width: 1200px) {
+	.navbar-inner .container {
+		width:1170px;
+	}
+}
+@media (min-width: 1450px) {
+	.forkme {
+		display: block;
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 50000;
+	}
+	.forkme img {
+		display:block;
+	}
+	.forkme:before {
+		display:none;
+	}
+}

@@ -5,7 +5,7 @@ Theme Options
 =============
 
 * logo\_icon: logo icon url (can be local in \_static) to use in top bar (in
-  addition to title). Will be rendered with a height of 25px.
+  addition to title). Will be rendered with a height of 30px.
 * git\_repo: git(hub) repository link for the fork me badge. Example:
   `https://github.com/okfn/sphinx-theme-okfn`
 
@@ -60,15 +60,6 @@ html_theme_options = {
     }
 </pre>
 
-**Note**: If you use the theme as it is, a broken search box will be rendered
-in the left sidebar. In order to fix it, customize the items rendered in the
-sidebar:
-
-<pre>
-    html_sidebars = {
-        '**': ['globaltoc.html', 'localtoc.html', 'relations.html']
-    }
-</pre>
 
 License
 =======

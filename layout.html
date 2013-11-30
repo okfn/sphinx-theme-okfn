@@ -1,32 +1,35 @@
 {% extends "basic/layout.html" %}
 {% set script_files = script_files + ['_static/bootstrap-css-tweaks.js'] %}
-{% set css_files = ['_static/css/bootstrap.css', '_static/css/fix.css', '_static/css/bootstrap-responsive.css', '_static/bootstrap-sphinx.css'] + css_files %}
+{% set css_files = ['_static/bootstrap-sphinx.css'] + css_files %}
 
 
 {%- block extrahead %}
 {% endblock %}
 
 {% block header %}
-  {% if theme_git_repo %}
-    <a href="{{ theme_git_repo }}"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 50000;"
-    src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-  {% endif %}
-  <div class="navbar navbar-fixed-top">
+  
+{% if theme_show_okfn_logo %}
+  <div id="okf-panel" class="collapse"><iframe src="http://assets.okfn.org/themes/okfn/okf-panel.html" scrolling="no"></iframe></div>
+{% endif %}
+
+  <div class="navbar">
     <div class="navbar-inner">
-      <div class="container-fluid">
-        {% if theme_logo_icon %}
+      <div class="container">
+        {% if theme_logo_icon %} 
         <a class="logo-icon pull-left" href="{{ pathto(master_doc) }}"><img src="{{ pathto('_static/' + theme_logo_icon, 1) }}" alt="{{ project|e }}" /></a>
         {% endif %}
         <a class="brand" href="{{ pathto(master_doc) }}">{{ project|e }}{% if theme_show_version %}<span class="version"> v{{release}}</span>{% endif %}</a>
         {% include "navbar-nav.html" ignore missing %}
         {% if theme_show_okfn_logo %}
-        <a class="okfn-logo pull-right" href="http://okfn.org/" title="An Open Knowledge Foundation Project">
-          <img src="https://s3.amazonaws.com/assets.okfn.org/p/okfn/img/logo_28x30.png" alt="Open Knowledge Foundation logo" />
-        </a>
+          <div class="okfn-ribbon"><a href="http://okfn.org/" data-toggle="collapse" data-target="#okf-panel" title="Part of the Open Knowledge Foundation Network">An Open Knowledge Foundation Site</a></div>
         {% endif %}
-        {% block sidebarsearch %}
-          {% include "searchbox.html" %}
-        {% endblock %}
+        <div class="pull-right navbar-search span3">
+          {% block sidebarsearch %}
+            {%- if pagename != "search" %}
+              {% include "searchbox.html" %}
+            {%- endif %}
+          {% endblock %}
+        </div>
       </div>
     </div>
   </div>
@@ -38,31 +41,33 @@
 {% block relbar2 %}{% endblock %}
 
 {%- block content %}
-<div class="container-fluid">
-  <div class="row-fluid">
-    <div class="span4">
-      <div class="well sidebar-nav">
+
+{# The breadcrumb navigation links. #}
+<div class="sub-header">
+  <ul class="container breadcrumb">
+    {%- block rootrellink %}
+      <li><a href="{{ pathto(master_doc) }}">{{ shorttitle|e }}</a>{{ reldelim1 }}</li>
+    {%- endblock %}
+    {%- for parent in parents %}
+      <li><a href="{{ parent.link|e }}"
+            {% if loop.last %}{{ accesskey("U") }}{% endif %}>
+            {{ parent.title }}
+          </a>{{ reldelim1 }}</li>
+    {%- endfor %}
+  </ul>
+</div>
+ 
+<div class="container">
+  <div class="row">
+    <div class="span3">
+      
         {% block sidebar2 %}
           {{ sidebar() }}
         {% endblock %}
-      </div><!--/.well -->
+      
     </div><!--/span-->
-    <div class="span8">
+    <div class="span9">
       <div class="content">
-
-        {# The breadcrumb navigation links. #}
-        <div style="font-size:smaller;">
-            {%- block rootrellink %}
-              <a href="{{ pathto(master_doc) }}">{{ shorttitle|e }}</a>{{ reldelim1 }}
-            {%- endblock %}
-            {%- for parent in parents %}
-              <a href="{{ parent.link|e }}"
-                    {% if loop.last %}{{ accesskey("U") }}{% endif %}>
-                    {{ parent.title }}
-                  </a>
-                  {{ reldelim1 }}
-            {%- endfor %}
-        </div>
 
         {% block body %} {% endblock %}
 
@@ -97,12 +102,19 @@
 
 <footer>
   <div class="inner">
-    <div class="container-fluid">
+    <div class="container">
       {% include "footer.html" %}
+      {% if theme_git_repo %}
+        <a href="{{ theme_git_repo }}" class="forkme" title="Fork on GitHub"><img src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+      {% endif %}
     </div>
   </div>
 </footer>
 
+{% if theme_show_okfn_logo %}
+<script src="http://assets.okfn.org/themes/okfn/collapse.min.js" type="text/javascript"></script>
+<script src="http://assets.okfn.org/themes/okfn/okf-panel.js" type="text/javascript"></script>
+{% endif %}
 
 {% if theme_google_analytics_id %}
 <script type="text/javascript">
@@ -118,4 +130,3 @@
 </script>
 {% endif %}
 {%- endblock %}
-
