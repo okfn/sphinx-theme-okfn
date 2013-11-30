@@ -1,21 +1,24 @@
-Repo for a Bootstrap based sphinx theme with lots of customizability (e.g.
-google analytics, logo etc).
+A bootstrap-based theme for [Sphinx Documentation generator][sphinx] developed for use at the [Open Knowledge Foundation][okf] (but usuable by anyone!).
+
+[okf]: http://okfn.org/
+[sphinx]: http://sphinx-doc.org/
+
 
 Theme Options
 =============
 
-* logo\_icon: logo icon url (can be local in \_static) to use in top bar (in
+* `logo_icon`: logo icon url (can be local in \_static) to use in top bar (in
   addition to title). Will be rendered with a height of 30px.
-* git\_repo: git(hub) repository link for the fork me badge. Example:
+* `git_repo`: git(hub) repository link for the fork me badge. Example:
   `https://github.com/okfn/sphinx-theme-okfn`
+* `google_analytics_id`: your google analytics id
 
-Configuring the sidebar:
+Configuring the sidebar
+-----------------------
 
-* Use the standard sphinx sidebars setup: http://sphinx.pocoo.org/config.html#confval-html\_sidebars
+Use the standard sphinx sidebars setup: http://sphinx.pocoo.org/config.html#confval-html\_sidebars
 
-  * E.g. to have the global ToC there just add globaltoc.html to the list. To
-    have local table of contents (for current page) at localtoc.html to the
-    list.
+E.g. to have the global ToC there just add globaltoc.html to the list. To have local table of contents (for current page) add localtoc.html to the list.
 
 Configuring the Footer
 ----------------------
